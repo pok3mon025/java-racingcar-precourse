@@ -4,13 +4,20 @@ import racingcar.utils.RandomUtils;
 
 public class Car {
 	private static final int STOP_MAX_VALUE = 3;
+	private static final int MAX_NAME_LENGTH = 5;
 
 	protected int position = 0;
-	private final CarName name;
+	protected final String name;
 
-	public Car(int position, CarName name) {
-		this.position = position;
+	public Car(String name) {
+		validateNameLength(name);
 		this.name = name;
+	}
+
+	private void validateNameLength(String name) {
+		if (name.length() > MAX_NAME_LENGTH) {
+			throw new IllegalArgumentException("[ERROR] 자동차 이름은 5자 이하만 가능합니다.");
+		}
 	}
 
 	public CarStatus race() {
@@ -27,4 +34,5 @@ public class Car {
 	private void movePosition() {
 		this.position++;
 	}
+
 }

@@ -12,14 +12,14 @@ public class CarTest {
 
 	@BeforeEach
 	void setUp() {
-		car = new Car(0, new CarName("A"));
+		car = new Car("A");
 	}
 
 	@Test
 	@DisplayName("자동차 이름 길이 유효성 체크")
 	void validNameLengthTest() {
 		IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
-			() -> new Car(0, new CarName("AAAAAA")));
+			() -> new Car("AAAAAA"));
 		assertThat(exception.getMessage()).isEqualTo("[ERROR] 자동차 이름은 5자 이하만 가능합니다.");
 	}
 
