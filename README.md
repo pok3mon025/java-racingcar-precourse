@@ -5,3 +5,10 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+## 기능 목록
+* [ ] 자동차 이름 입력 기능 구현
+* [ ] 시도 횟수 입력 기능 구현
+* [ ] 0~9 사이 random값 생성 기능 구현
+* [ ] 자동차 전진/멈춤 기능 구현
+* [ ] 우승자 선정 기능 구현
