@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.sun.deploy.util.StringUtils;
 
+import racingcar.view.OutputView;
+
 public class Cars {
 	List<Car> cars = new ArrayList<>();
 
@@ -16,6 +18,14 @@ public class Cars {
 		for (Car car : cars) {
 			car.race();
 		}
+		printDistance();
+	}
+
+	public void printDistance() {
+		for (Car car : cars) {
+			OutputView.printCarDistance(car.name, car.position);
+		}
+		OutputView.printNextLine();
 	}
 
 	public String getWinner() {
