@@ -18,7 +18,6 @@ public class Cars {
 		for (Car car : cars) {
 			car.race();
 		}
-		printDistance();
 	}
 
 	public void printDistance() {

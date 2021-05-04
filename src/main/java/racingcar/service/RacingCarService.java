@@ -26,6 +26,7 @@ public class RacingCarService {
 
 		for (int i = 0; i < racingCount; i++) {
 			cars.race();
+			cars.printDistance();
 		}
 
 		OutputView.printWinner(cars.getWinner());
